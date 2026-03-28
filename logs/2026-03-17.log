@@ -1,0 +1,532 @@
+2026-03-17 17:51:05 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 17:51:05 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 17:51:05 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 17:51:05 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 17:51:05 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 17:51:25 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 19:24:30 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 19:24:30 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 19:24:30 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 19:24:30 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 19:24:30 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 19:24:34 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 19:24:50 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 19:24:50 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 19:24:50 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 19:24:50 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 19:24:50 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 19:24:53 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 19:30:57 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 19:30:57 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 19:30:57 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 19:30:57 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 19:30:57 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 19:31:01 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 19:46:58 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 19:46:58 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 19:46:58 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 19:46:58 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 19:46:58 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 19:47:03 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 19:48:40 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 19:48:40 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 19:48:40 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 19:48:40 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 19:48:40 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 19:48:43 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 19:51:48 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 19:51:48 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 19:51:48 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 19:51:48 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 19:51:48 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 19:51:52 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 19:54:25 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 19:54:25 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 19:54:25 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 19:54:25 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 19:54:25 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 19:54:30 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 20:20:26 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 20:20:26 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 20:20:26 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 20:20:26 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 20:20:26 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 20:20:30 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 21:14:44 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 21:14:44 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 21:14:44 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 21:14:44 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 21:14:44 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 21:14:47 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 21:25:53 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 21:25:53 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 21:25:53 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 21:25:53 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 21:25:53 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 21:25:57 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 21:31:25 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 21:31:25 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 21:31:25 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 21:31:25 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 21:31:25 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 21:31:29 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 21:34:02 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 21:34:02 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 21:34:02 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 21:34:02 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 21:34:02 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 21:34:05 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 21:36:42 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 21:36:42 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 21:36:42 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 21:36:42 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 21:36:42 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 21:36:45 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 21:45:52 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 21:45:52 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 21:45:52 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 21:45:52 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 21:45:52 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 21:45:56 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 22:17:34 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 22:17:34 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 22:17:34 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 22:17:34 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 22:17:34 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 22:17:36 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 22:29:56 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 22:29:56 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 22:29:56 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 22:29:56 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 22:29:56 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 22:29:58 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 22:30:09 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 22:30:09 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 22:30:09 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 22:30:09 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 22:30:09 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 22:30:11 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================
+2026-03-17 22:45:38 | INFO     | mcp_tools | mcp_tools.py:37 | ==================================================
+2026-03-17 22:45:38 | INFO     | mcp_tools | mcp_tools.py:38 | 开始初始化 MCP 工具管理器
+2026-03-17 22:45:38 | INFO     | mcp_tools | mcp_tools.py:42 | 已加载 2 个 MCP 服务器配置:
+2026-03-17 22:45:38 | INFO     | mcp_tools | mcp_tools.py:45 |   - 12306: npx -y 12306-mcp
+2026-03-17 22:45:38 | INFO     | mcp_tools | mcp_tools.py:45 |   - amap: npx -y @amap/amap-maps-mcp-server
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:51 | 已加载 20 个工具:
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-current-date
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-stations-code-in-city
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-of-citys
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-code-by-names
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-station-by-telecode
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-tickets
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-interline-tickets
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - get-train-route-stations
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_regeocode
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_geo
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_ip_location
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_weather
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_search_detail
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_bicycling
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_walking
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_driving
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_direction_transit_integrated
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_distance
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_text_search
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:53 |   - maps_around_search
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:55 | MCP 工具管理器初始化成功
+2026-03-17 22:45:41 | INFO     | mcp_tools | mcp_tools.py:56 | ==================================================

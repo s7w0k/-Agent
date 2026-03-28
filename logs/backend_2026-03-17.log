@@ -1,0 +1,1856 @@
+2026-03-17 17:51:01 | INFO     | backend.main | main.py:29 | 应用启动，开始初始化 Agent...
+2026-03-17 17:51:05 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 17:51:25 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 17:51:27 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 17:51:27 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 17:51:27 | INFO     | backend.main | main.py:33 | Agent 初始化成功，服务就绪
+2026-03-17 17:52:00 | INFO     | backend.main | main.py:117 | WebSocket 连接建立：Address(host='127.0.0.1', port=51815)
+2026-03-17 17:52:00 | INFO     | backend.main | main.py:132 | 客户端断开连接
+2026-03-17 17:52:00 | INFO     | backend.main | main.py:117 | WebSocket 连接建立：Address(host='127.0.0.1', port=60503)
+2026-03-17 17:52:04 | INFO     | backend.main | main.py:117 | WebSocket 连接建立：Address(host='127.0.0.1', port=64684)
+2026-03-17 17:52:07 | INFO     | backend.main | main.py:146 | 收到用户消息：你好，请介绍一下你自己...
+2026-03-17 17:52:07 | INFO     | backend.main | main.py:198 | 开始流式执行 Agent... (历史消息数：0)
+2026-03-17 17:52:07 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 17:52:08 | ERROR    | monitor_handler | monitor_handler.py:283 | stream 出错：Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+Traceback (most recent call last):
+  File "D:\研究生\1\项目\Travel_Agent-main\backend\monitor_handler.py", line 266, in stream
+    async for event in agent.astream_events(
+    ...<10 lines>...
+        self._extract_final_content(event)
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1516, in astream_events
+    async for event in event_stream:
+        yield event
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1100, in _astream_events_implementation_v2
+    await task
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1055, in consume_astream
+    async for _ in event_streamer.tap_output_aiter(run_id, stream):
+        # All the content will be picked up
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3109, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 158, in arun_with_retry
+    async for _ in task.proc.astream(task.input, config):
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 839, in astream
+    output = await asyncio.create_task(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        _consume_aiter(aiterator), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 904, in _consume_aiter
+    async for chunk in it:
+    ...<8 lines>...
+            output = chunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1170, in astream
+    yield await self.ainvoke(input, config, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1349, in amodel_node
+    model_response = await _execute_model_async(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1321, in _execute_model_async
+    output = await model_.ainvoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+        prompt_messages, stop=stop, callbacks=callbacks, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1318, in _agenerate_with_cache
+    async for chunk in self._astream(messages, stop=stop, **kwargs):
+    ...<21 lines>...
+        yielded = True
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1698, in _astream
+    _handle_openai_api_error(e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1671, in _astream
+    response = await self.async_client.create(**payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 2714, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<49 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1884, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1669, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+During task with name 'model' and id '7988d646-7684-ebc2-cb5c-d335cba64c3b'
+2026-03-17 17:52:08 | ERROR    | backend.main | main.py:246 | Agent 执行出错：Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+Traceback (most recent call last):
+  File "D:\研究生\1\项目\Travel_Agent-main\backend\main.py", line 204, in execute_and_stream
+    async for event in monitor.stream(
+    ...<8 lines>...
+            final_content = event["final_content"]
+  File "D:\研究生\1\项目\Travel_Agent-main\backend\monitor_handler.py", line 266, in stream
+    async for event in agent.astream_events(
+    ...<10 lines>...
+        self._extract_final_content(event)
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1516, in astream_events
+    async for event in event_stream:
+        yield event
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1100, in _astream_events_implementation_v2
+    await task
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1055, in consume_astream
+    async for _ in event_streamer.tap_output_aiter(run_id, stream):
+        # All the content will be picked up
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3109, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 158, in arun_with_retry
+    async for _ in task.proc.astream(task.input, config):
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 839, in astream
+    output = await asyncio.create_task(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        _consume_aiter(aiterator), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 904, in _consume_aiter
+    async for chunk in it:
+    ...<8 lines>...
+            output = chunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1170, in astream
+    yield await self.ainvoke(input, config, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1349, in amodel_node
+    model_response = await _execute_model_async(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1321, in _execute_model_async
+    output = await model_.ainvoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+        prompt_messages, stop=stop, callbacks=callbacks, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1318, in _agenerate_with_cache
+    async for chunk in self._astream(messages, stop=stop, **kwargs):
+    ...<21 lines>...
+        yielded = True
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1698, in _astream
+    _handle_openai_api_error(e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1671, in _astream
+    response = await self.async_client.create(**payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 2714, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<49 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1884, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1669, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+During task with name 'model' and id '7988d646-7684-ebc2-cb5c-d335cba64c3b'
+2026-03-17 17:52:19 | INFO     | backend.main | main.py:146 | 收到用户消息：你好，请介绍一下你自己...
+2026-03-17 17:52:19 | INFO     | backend.main | main.py:198 | 开始流式执行 Agent... (历史消息数：0)
+2026-03-17 17:52:19 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 17:52:19 | ERROR    | monitor_handler | monitor_handler.py:283 | stream 出错：Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+Traceback (most recent call last):
+  File "D:\研究生\1\项目\Travel_Agent-main\backend\monitor_handler.py", line 266, in stream
+    async for event in agent.astream_events(
+    ...<10 lines>...
+        self._extract_final_content(event)
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1516, in astream_events
+    async for event in event_stream:
+        yield event
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1100, in _astream_events_implementation_v2
+    await task
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1055, in consume_astream
+    async for _ in event_streamer.tap_output_aiter(run_id, stream):
+        # All the content will be picked up
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3109, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 158, in arun_with_retry
+    async for _ in task.proc.astream(task.input, config):
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 839, in astream
+    output = await asyncio.create_task(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        _consume_aiter(aiterator), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 904, in _consume_aiter
+    async for chunk in it:
+    ...<8 lines>...
+            output = chunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1170, in astream
+    yield await self.ainvoke(input, config, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1349, in amodel_node
+    model_response = await _execute_model_async(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1321, in _execute_model_async
+    output = await model_.ainvoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+        prompt_messages, stop=stop, callbacks=callbacks, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1318, in _agenerate_with_cache
+    async for chunk in self._astream(messages, stop=stop, **kwargs):
+    ...<21 lines>...
+        yielded = True
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1698, in _astream
+    _handle_openai_api_error(e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1671, in _astream
+    response = await self.async_client.create(**payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 2714, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<49 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1884, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1669, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+During task with name 'model' and id '1bb26e6c-53cb-728a-a98e-090ff5542faf'
+2026-03-17 17:52:19 | ERROR    | backend.main | main.py:246 | Agent 执行出错：Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+Traceback (most recent call last):
+  File "D:\研究生\1\项目\Travel_Agent-main\backend\main.py", line 204, in execute_and_stream
+    async for event in monitor.stream(
+    ...<8 lines>...
+            final_content = event["final_content"]
+  File "D:\研究生\1\项目\Travel_Agent-main\backend\monitor_handler.py", line 266, in stream
+    async for event in agent.astream_events(
+    ...<10 lines>...
+        self._extract_final_content(event)
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1516, in astream_events
+    async for event in event_stream:
+        yield event
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1100, in _astream_events_implementation_v2
+    await task
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1055, in consume_astream
+    async for _ in event_streamer.tap_output_aiter(run_id, stream):
+        # All the content will be picked up
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3109, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 158, in arun_with_retry
+    async for _ in task.proc.astream(task.input, config):
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 839, in astream
+    output = await asyncio.create_task(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        _consume_aiter(aiterator), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 904, in _consume_aiter
+    async for chunk in it:
+    ...<8 lines>...
+            output = chunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1170, in astream
+    yield await self.ainvoke(input, config, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1349, in amodel_node
+    model_response = await _execute_model_async(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1321, in _execute_model_async
+    output = await model_.ainvoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+        prompt_messages, stop=stop, callbacks=callbacks, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1318, in _agenerate_with_cache
+    async for chunk in self._astream(messages, stop=stop, **kwargs):
+    ...<21 lines>...
+        yielded = True
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1698, in _astream
+    _handle_openai_api_error(e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1671, in _astream
+    response = await self.async_client.create(**payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 2714, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<49 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1884, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1669, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+During task with name 'model' and id '1bb26e6c-53cb-728a-a98e-090ff5542faf'
+2026-03-17 17:52:38 | INFO     | backend.main | main.py:146 | 收到用户消息：帮我规划一个从北京到上海的 3 天旅行...
+2026-03-17 17:52:38 | INFO     | backend.main | main.py:198 | 开始流式执行 Agent... (历史消息数：0)
+2026-03-17 17:52:38 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 17:52:38 | ERROR    | monitor_handler | monitor_handler.py:283 | stream 出错：Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+Traceback (most recent call last):
+  File "D:\研究生\1\项目\Travel_Agent-main\backend\monitor_handler.py", line 266, in stream
+    async for event in agent.astream_events(
+    ...<10 lines>...
+        self._extract_final_content(event)
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1516, in astream_events
+    async for event in event_stream:
+        yield event
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1100, in _astream_events_implementation_v2
+    await task
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1055, in consume_astream
+    async for _ in event_streamer.tap_output_aiter(run_id, stream):
+        # All the content will be picked up
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3109, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 158, in arun_with_retry
+    async for _ in task.proc.astream(task.input, config):
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 839, in astream
+    output = await asyncio.create_task(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        _consume_aiter(aiterator), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 904, in _consume_aiter
+    async for chunk in it:
+    ...<8 lines>...
+            output = chunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1170, in astream
+    yield await self.ainvoke(input, config, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1349, in amodel_node
+    model_response = await _execute_model_async(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1321, in _execute_model_async
+    output = await model_.ainvoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+        prompt_messages, stop=stop, callbacks=callbacks, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1318, in _agenerate_with_cache
+    async for chunk in self._astream(messages, stop=stop, **kwargs):
+    ...<21 lines>...
+        yielded = True
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1698, in _astream
+    _handle_openai_api_error(e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1671, in _astream
+    response = await self.async_client.create(**payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 2714, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<49 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1884, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1669, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+During task with name 'model' and id '4880a6e2-1e8c-d966-ebd1-00e59f022b1a'
+2026-03-17 17:52:38 | ERROR    | backend.main | main.py:246 | Agent 执行出错：Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+Traceback (most recent call last):
+  File "D:\研究生\1\项目\Travel_Agent-main\backend\main.py", line 204, in execute_and_stream
+    async for event in monitor.stream(
+    ...<8 lines>...
+            final_content = event["final_content"]
+  File "D:\研究生\1\项目\Travel_Agent-main\backend\monitor_handler.py", line 266, in stream
+    async for event in agent.astream_events(
+    ...<10 lines>...
+        self._extract_final_content(event)
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1516, in astream_events
+    async for event in event_stream:
+        yield event
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1100, in _astream_events_implementation_v2
+    await task
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1055, in consume_astream
+    async for _ in event_streamer.tap_output_aiter(run_id, stream):
+        # All the content will be picked up
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3109, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 158, in arun_with_retry
+    async for _ in task.proc.astream(task.input, config):
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 839, in astream
+    output = await asyncio.create_task(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        _consume_aiter(aiterator), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 904, in _consume_aiter
+    async for chunk in it:
+    ...<8 lines>...
+            output = chunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1170, in astream
+    yield await self.ainvoke(input, config, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1349, in amodel_node
+    model_response = await _execute_model_async(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1321, in _execute_model_async
+    output = await model_.ainvoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+        prompt_messages, stop=stop, callbacks=callbacks, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1318, in _agenerate_with_cache
+    async for chunk in self._astream(messages, stop=stop, **kwargs):
+    ...<21 lines>...
+        yielded = True
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1698, in _astream
+    _handle_openai_api_error(e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1671, in _astream
+    response = await self.async_client.create(**payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 2714, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<49 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1884, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1669, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+During task with name 'model' and id '4880a6e2-1e8c-d966-ebd1-00e59f022b1a'
+2026-03-17 17:52:58 | INFO     | backend.main | main.py:146 | 收到用户消息：帮我规划一个从北京到上海的 3 天旅行...
+2026-03-17 17:52:58 | INFO     | backend.main | main.py:198 | 开始流式执行 Agent... (历史消息数：0)
+2026-03-17 17:52:58 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 17:52:59 | ERROR    | monitor_handler | monitor_handler.py:283 | stream 出错：Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+Traceback (most recent call last):
+  File "D:\研究生\1\项目\Travel_Agent-main\backend\monitor_handler.py", line 266, in stream
+    async for event in agent.astream_events(
+    ...<10 lines>...
+        self._extract_final_content(event)
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1516, in astream_events
+    async for event in event_stream:
+        yield event
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1100, in _astream_events_implementation_v2
+    await task
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1055, in consume_astream
+    async for _ in event_streamer.tap_output_aiter(run_id, stream):
+        # All the content will be picked up
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3109, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 158, in arun_with_retry
+    async for _ in task.proc.astream(task.input, config):
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 839, in astream
+    output = await asyncio.create_task(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        _consume_aiter(aiterator), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 904, in _consume_aiter
+    async for chunk in it:
+    ...<8 lines>...
+            output = chunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1170, in astream
+    yield await self.ainvoke(input, config, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1349, in amodel_node
+    model_response = await _execute_model_async(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1321, in _execute_model_async
+    output = await model_.ainvoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+        prompt_messages, stop=stop, callbacks=callbacks, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1318, in _agenerate_with_cache
+    async for chunk in self._astream(messages, stop=stop, **kwargs):
+    ...<21 lines>...
+        yielded = True
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1698, in _astream
+    _handle_openai_api_error(e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1671, in _astream
+    response = await self.async_client.create(**payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 2714, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<49 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1884, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1669, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+During task with name 'model' and id 'ca9ac8f4-8484-d5f8-6c2b-a5f05ca765dc'
+2026-03-17 17:52:59 | ERROR    | backend.main | main.py:246 | Agent 执行出错：Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+Traceback (most recent call last):
+  File "D:\研究生\1\项目\Travel_Agent-main\backend\main.py", line 204, in execute_and_stream
+    async for event in monitor.stream(
+    ...<8 lines>...
+            final_content = event["final_content"]
+  File "D:\研究生\1\项目\Travel_Agent-main\backend\monitor_handler.py", line 266, in stream
+    async for event in agent.astream_events(
+    ...<10 lines>...
+        self._extract_final_content(event)
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1516, in astream_events
+    async for event in event_stream:
+        yield event
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1100, in _astream_events_implementation_v2
+    await task
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 1055, in consume_astream
+    async for _ in event_streamer.tap_output_aiter(run_id, stream):
+        # All the content will be picked up
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3109, in astream
+    async for _ in runner.atick(
+    ...<16 lines>...
+            yield o
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 304, in atick
+    await arun_with_retry(
+    ...<15 lines>...
+    )
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 158, in arun_with_retry
+    async for _ in task.proc.astream(task.input, config):
+        pass
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 839, in astream
+    output = await asyncio.create_task(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        _consume_aiter(aiterator), context=context
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 904, in _consume_aiter
+    async for chunk in it:
+    ...<8 lines>...
+            output = chunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\tracers\event_stream.py", line 199, in tap_output_aiter
+    first = await anext(output, sentinel)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1589, in atransform
+    async for ichunk in input:
+    ...<14 lines>...
+                final = ichunk
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 1170, in astream
+    yield await self.ainvoke(input, config, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 473, in ainvoke
+    ret = await self.afunc(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1349, in amodel_node
+    model_response = await _execute_model_async(request)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain\agents\factory.py", line 1321, in _execute_model_async
+    output = await model_.ainvoke(messages)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5708, in ainvoke
+    return await self.bound.ainvoke(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 425, in ainvoke
+    llm_result = await self.agenerate_prompt(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1134, in agenerate_prompt
+    return await self.agenerate(
+           ^^^^^^^^^^^^^^^^^^^^^
+        prompt_messages, stop=stop, callbacks=callbacks, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1092, in agenerate
+    raise exceptions[0]
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1318, in _agenerate_with_cache
+    async for chunk in self._astream(messages, stop=stop, **kwargs):
+    ...<21 lines>...
+        yielded = True
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1698, in _astream
+    _handle_openai_api_error(e)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\langchain_openai\chat_models\base.py", line 1671, in _astream
+    response = await self.async_client.create(**payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\resources\chat\completions\completions.py", line 2714, in create
+    return await self._post(
+           ^^^^^^^^^^^^^^^^^
+    ...<49 lines>...
+    )
+    ^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1884, in post
+    return await self.request(cast_to, opts, stream=stream, stream_cls=stream_cls)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\openai\_base_client.py", line 1669, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.APIStatusError: Error code: 402 - {'error': {'message': 'Insufficient Balance', 'type': 'unknown_error', 'param': None, 'code': 'invalid_request_error'}}
+During task with name 'model' and id 'ca9ac8f4-8484-d5f8-6c2b-a5f05ca765dc'
+2026-03-17 17:57:35 | INFO     | backend.main | main.py:146 | 收到用户消息：你好，请介绍一下你自己...
+2026-03-17 17:57:35 | INFO     | backend.main | main.py:198 | 开始流式执行 Agent... (历史消息数：0)
+2026-03-17 17:57:35 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 17:57:47 | DEBUG    | monitor_handler | monitor_handler.py:318 | 获取到最终回复，长度：631
+2026-03-17 17:57:47 | INFO     | monitor_handler | monitor_handler.py:323 | 执行完成 | LLM 调用：1 | 工具调用：0 | 步骤：2 | Token: 0 (输入:0 + 输出:0)
+2026-03-17 17:57:47 | INFO     | backend.main | main.py:215 | Agent 执行完成，共 8 个事件
+2026-03-17 17:57:47 | INFO     | backend.main | main.py:225 | 发送最终结果，长度：631
+2026-03-17 17:57:47 | INFO     | backend.main | main.py:266 | 当前对话历史：2 条消息
+2026-03-17 17:58:23 | INFO     | backend.main | main.py:146 | 收到用户消息：帮我规划一个从北京到上海的 3 天旅行...
+2026-03-17 17:58:23 | INFO     | backend.main | main.py:198 | 开始流式执行 Agent... (历史消息数：2)
+2026-03-17 17:58:23 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 17:58:32 | DEBUG    | monitor_handler | monitor_handler.py:318 | 获取到最终回复，长度：506
+2026-03-17 17:58:32 | INFO     | monitor_handler | monitor_handler.py:323 | 执行完成 | LLM 调用：1 | 工具调用：0 | 步骤：2 | Token: 0 (输入:0 + 输出:0)
+2026-03-17 17:58:32 | INFO     | backend.main | main.py:215 | Agent 执行完成，共 8 个事件
+2026-03-17 17:58:32 | INFO     | backend.main | main.py:225 | 发送最终结果，长度：506
+2026-03-17 17:58:32 | INFO     | backend.main | main.py:266 | 当前对话历史：4 条消息
+2026-03-17 17:59:24 | INFO     | backend.main | main.py:146 | 收到用户消息：计划明天从北京南站出发，到达上海虹桥站，预算为舒适型...
+2026-03-17 17:59:24 | INFO     | backend.main | main.py:198 | 开始流式执行 Agent... (历史消息数：4)
+2026-03-17 17:59:24 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 18:00:48 | DEBUG    | monitor_handler | monitor_handler.py:318 | 获取到最终回复，长度：1626
+2026-03-17 18:00:48 | INFO     | monitor_handler | monitor_handler.py:323 | 执行完成 | LLM 调用：9 | 工具调用：8 | 步骤：18 | Token: 0 (输入:0 + 输出:0)
+2026-03-17 18:00:48 | INFO     | backend.main | main.py:215 | Agent 执行完成，共 72 个事件
+2026-03-17 18:00:48 | INFO     | backend.main | main.py:225 | 发送最终结果，长度：1626
+2026-03-17 18:00:48 | INFO     | backend.main | main.py:266 | 当前对话历史：6 条消息
+2026-03-17 18:01:55 | INFO     | backend.main | main.py:132 | 客户端断开连接
+2026-03-17 18:01:55 | INFO     | backend.main | main.py:132 | 客户端断开连接
+2026-03-17 18:01:55 | INFO     | backend.main | main.py:40 | 应用关闭，清理资源...
+2026-03-17 19:23:32 | INFO     | main | main.py:43 | 应用启动，开始初始化...
+2026-03-17 19:23:32 | INFO     | main | main.py:52 | 数据库初始化完成
+2026-03-17 19:23:35 | ERROR    | agent_manager | agent_manager.py:58 | Agent 启动初始化失败：cannot import name 'SkillConfig' from 'schemas' (D:\研究生\1\项目\Travel_Agent-main\backend\schemas.py)
+2026-03-17 19:23:35 | ERROR    | main | main.py:62 | Agent 初始化失败，服务可能不可用
+2026-03-17 19:24:28 | INFO     | backend.main | main.py:43 | 应用启动，开始初始化...
+2026-03-17 19:24:28 | INFO     | backend.main | main.py:52 | 数据库初始化完成
+2026-03-17 19:24:30 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 19:24:34 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 19:24:35 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 19:24:35 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 19:24:35 | INFO     | backend.main | main.py:60 | Agent 初始化成功，服务就绪
+2026-03-17 19:24:35 | INFO     | backend.main | main.py:67 | 应用关闭，清理资源...
+2026-03-17 19:24:42 | INFO     | main | main.py:67 | 应用关闭，清理资源...
+2026-03-17 19:24:48 | INFO     | backend.main | main.py:43 | 应用启动，开始初始化...
+2026-03-17 19:24:48 | INFO     | backend.main | main.py:52 | 数据库初始化完成
+2026-03-17 19:24:50 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 19:24:53 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 19:24:54 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 19:24:54 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 19:24:54 | INFO     | backend.main | main.py:60 | Agent 初始化成功，服务就绪
+2026-03-17 19:25:22 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=51100)
+2026-03-17 19:25:22 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=49764)
+2026-03-17 19:25:22 | INFO     | backend.main | main.py:163 | 客户端断开连接
+2026-03-17 19:25:25 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=55578)
+2026-03-17 19:25:29 | INFO     | backend.main | main.py:177 | 收到用户消息：你是谁...
+2026-03-17 19:25:29 | INFO     | backend.main | main.py:229 | 开始流式执行 Agent... (历史消息数：0)
+2026-03-17 19:25:29 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 19:25:35 | DEBUG    | monitor_handler | monitor_handler.py:318 | 获取到最终回复，长度：353
+2026-03-17 19:25:35 | INFO     | monitor_handler | monitor_handler.py:323 | 执行完成 | LLM 调用：1 | 工具调用：0 | 步骤：2 | Token: 0 (输入:0 + 输出:0)
+2026-03-17 19:25:35 | INFO     | backend.main | main.py:246 | Agent 执行完成，共 8 个事件
+2026-03-17 19:25:35 | INFO     | backend.main | main.py:256 | 发送最终结果，长度：353
+2026-03-17 19:25:35 | INFO     | backend.main | main.py:297 | 当前对话历史：2 条消息
+2026-03-17 19:30:52 | INFO     | backend.main | main.py:163 | 客户端断开连接
+2026-03-17 19:30:52 | INFO     | backend.main | main.py:163 | 客户端断开连接
+2026-03-17 19:30:52 | INFO     | backend.main | main.py:67 | 应用关闭，清理资源...
+2026-03-17 19:30:55 | INFO     | backend.main | main.py:43 | 应用启动，开始初始化...
+2026-03-17 19:30:55 | INFO     | backend.main | main.py:52 | 数据库初始化完成
+2026-03-17 19:30:57 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 19:31:01 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 19:31:02 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 19:31:02 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 19:31:02 | INFO     | backend.main | main.py:60 | Agent 初始化成功，服务就绪
+2026-03-17 19:31:03 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=62310)
+2026-03-17 19:31:03 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=55483)
+2026-03-17 19:31:07 | INFO     | backend.main | main.py:163 | 客户端断开连接
+2026-03-17 19:31:07 | INFO     | backend.main | main.py:163 | 客户端断开连接
+2026-03-17 19:31:12 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=62202)
+2026-03-17 19:31:12 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=58279)
+2026-03-17 19:31:15 | INFO     | backend.main | main.py:163 | 客户端断开连接
+2026-03-17 19:31:16 | INFO     | backend.main | main.py:163 | 客户端断开连接
+2026-03-17 19:31:16 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=60765)
+2026-03-17 19:31:16 | INFO     | backend.main | main.py:163 | 客户端断开连接
+2026-03-17 19:31:16 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=64015)
+2026-03-17 19:31:17 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=64446)
+2026-03-17 19:31:17 | INFO     | backend.main | main.py:163 | 客户端断开连接
+2026-03-17 19:31:17 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=50466)
+2026-03-17 19:31:19 | INFO     | backend.main | main.py:163 | 客户端断开连接
+2026-03-17 19:31:20 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=54870)
+2026-03-17 19:31:22 | INFO     | backend.main | main.py:177 | 收到用户消息：你是谁...
+2026-03-17 19:31:22 | INFO     | backend.main | main.py:229 | 开始流式执行 Agent... (历史消息数：0)
+2026-03-17 19:31:22 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 19:31:28 | DEBUG    | monitor_handler | monitor_handler.py:318 | 获取到最终回复，长度：348
+2026-03-17 19:31:28 | INFO     | monitor_handler | monitor_handler.py:323 | 执行完成 | LLM 调用：1 | 工具调用：0 | 步骤：2 | Token: 0 (输入:0 + 输出:0)
+2026-03-17 19:31:28 | INFO     | backend.main | main.py:246 | Agent 执行完成，共 8 个事件
+2026-03-17 19:31:28 | INFO     | backend.main | main.py:256 | 发送最终结果，长度：348
+2026-03-17 19:31:28 | INFO     | backend.main | main.py:297 | 当前对话历史：2 条消息
+2026-03-17 19:46:53 | INFO     | backend.main | main.py:163 | 客户端断开连接
+2026-03-17 19:46:53 | INFO     | backend.main | main.py:163 | 客户端断开连接
+2026-03-17 19:46:53 | INFO     | backend.main | main.py:67 | 应用关闭，清理资源...
+2026-03-17 19:46:56 | INFO     | backend.main | main.py:43 | 应用启动，开始初始化...
+2026-03-17 19:46:56 | INFO     | backend.main | main.py:52 | 数据库初始化完成
+2026-03-17 19:46:58 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 19:47:03 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 19:47:04 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 19:47:04 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 19:47:04 | INFO     | backend.main | main.py:60 | Agent 初始化成功，服务就绪
+2026-03-17 19:47:08 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=56665)
+2026-03-17 19:47:11 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=55240)
+2026-03-17 19:47:11 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=65203)
+2026-03-17 19:47:13 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=49333)
+2026-03-17 19:47:13 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=64150)
+2026-03-17 19:47:14 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=52369)
+2026-03-17 19:47:49 | INFO     | backend.main | main.py:195 | 客户端断开连接
+2026-03-17 19:47:50 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=50204)
+2026-03-17 19:47:50 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=63771)
+2026-03-17 19:47:53 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=49570)
+2026-03-17 19:48:19 | INFO     | backend.main | main.py:195 | 客户端断开连接
+2026-03-17 19:48:19 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=64828)
+2026-03-17 19:48:19 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=55051)
+2026-03-17 19:48:23 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=56110)
+2026-03-17 19:48:36 | INFO     | backend.main | main.py:67 | 应用关闭，清理资源...
+2026-03-17 19:48:38 | INFO     | backend.main | main.py:43 | 应用启动，开始初始化...
+2026-03-17 19:48:38 | INFO     | backend.main | main.py:52 | 数据库初始化完成
+2026-03-17 19:48:40 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 19:48:43 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 19:48:44 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 19:48:44 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 19:48:44 | INFO     | backend.main | main.py:60 | Agent 初始化成功，服务就绪
+2026-03-17 19:48:51 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=63233)
+2026-03-17 19:48:57 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=64268)
+2026-03-17 19:48:57 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=54817)
+2026-03-17 19:49:01 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=49345)
+2026-03-17 19:50:57 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=61509)
+2026-03-17 19:51:44 | INFO     | backend.main | main.py:67 | 应用关闭，清理资源...
+2026-03-17 19:51:47 | INFO     | backend.main | main.py:43 | 应用启动，开始初始化...
+2026-03-17 19:51:47 | INFO     | backend.main | main.py:52 | 数据库初始化完成
+2026-03-17 19:51:48 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 19:51:52 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 19:51:53 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 19:51:53 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 19:51:53 | INFO     | backend.main | main.py:60 | Agent 初始化成功，服务就绪
+2026-03-17 19:51:58 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=57040)
+2026-03-17 19:52:00 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=60398)
+2026-03-17 19:52:00 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=63432)
+2026-03-17 19:52:00 | WARNING  | backend.main | main.py:186 | 发送 session 信息失败: Unexpected ASGI message 'websocket.send', after sending 'websocket.close' or response already completed.
+2026-03-17 19:52:00 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=52751)
+2026-03-17 19:52:03 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=53381)
+2026-03-17 19:54:13 | WARNING  | backend.main | main.py:186 | 发送 session 信息失败: Unexpected ASGI message 'websocket.send', after sending 'websocket.close' or response already completed.
+2026-03-17 19:54:17 | INFO     | backend.main | main.py:148 | WebSocket 连接建立：Address(host='127.0.0.1', port=58371)
+2026-03-17 19:54:22 | WARNING  | backend.main | main.py:186 | 发送 session 信息失败: Unexpected ASGI message 'websocket.send', after sending 'websocket.close' or response already completed.
+2026-03-17 19:54:22 | WARNING  | backend.main | main.py:186 | 发送 session 信息失败: Unexpected ASGI message 'websocket.send', after sending 'websocket.close' or response already completed.
+2026-03-17 19:54:22 | WARNING  | backend.main | main.py:186 | 发送 session 信息失败: Unexpected ASGI message 'websocket.send', after sending 'websocket.close' or response already completed.
+2026-03-17 19:54:22 | WARNING  | backend.main | main.py:186 | 发送 session 信息失败: Unexpected ASGI message 'websocket.send', after sending 'websocket.close' or response already completed.
+2026-03-17 19:54:22 | INFO     | backend.main | main.py:67 | 应用关闭，清理资源...
+2026-03-17 19:54:23 | INFO     | backend.main | main.py:29 | 应用启动，开始初始化 Agent...
+2026-03-17 19:54:25 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 19:54:30 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 19:54:31 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 19:54:31 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 19:54:31 | INFO     | backend.main | main.py:33 | Agent 初始化成功，服务就绪
+2026-03-17 19:54:36 | INFO     | backend.main | main.py:117 | WebSocket 连接建立：Address(host='127.0.0.1', port=59000)
+2026-03-17 19:54:36 | INFO     | backend.main | main.py:117 | WebSocket 连接建立：Address(host='127.0.0.1', port=51375)
+2026-03-17 19:54:36 | INFO     | backend.main | main.py:117 | WebSocket 连接建立：Address(host='127.0.0.1', port=59183)
+2026-03-17 19:54:38 | INFO     | backend.main | main.py:117 | WebSocket 连接建立：Address(host='127.0.0.1', port=63368)
+2026-03-17 19:54:39 | INFO     | backend.main | main.py:132 | 客户端断开连接
+2026-03-17 19:54:39 | INFO     | backend.main | main.py:132 | 客户端断开连接
+2026-03-17 19:54:39 | INFO     | backend.main | main.py:117 | WebSocket 连接建立：Address(host='127.0.0.1', port=54292)
+2026-03-17 19:54:39 | INFO     | backend.main | main.py:132 | 客户端断开连接
+2026-03-17 19:54:40 | INFO     | backend.main | main.py:132 | 客户端断开连接
+2026-03-17 19:54:42 | INFO     | backend.main | main.py:117 | WebSocket 连接建立：Address(host='127.0.0.1', port=55014)
+2026-03-17 19:54:43 | INFO     | backend.main | main.py:146 | 收到用户消息：你是谁...
+2026-03-17 19:54:43 | INFO     | backend.main | main.py:198 | 开始流式执行 Agent... (历史消息数：0)
+2026-03-17 19:54:43 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 19:54:50 | DEBUG    | monitor_handler | monitor_handler.py:318 | 获取到最终回复，长度：319
+2026-03-17 19:54:50 | INFO     | monitor_handler | monitor_handler.py:323 | 执行完成 | LLM 调用：1 | 工具调用：0 | 步骤：2 | Token: 0 (输入:0 + 输出:0)
+2026-03-17 19:54:50 | INFO     | backend.main | main.py:215 | Agent 执行完成，共 8 个事件
+2026-03-17 19:54:50 | INFO     | backend.main | main.py:225 | 发送最终结果，长度：319
+2026-03-17 19:54:50 | INFO     | backend.main | main.py:266 | 当前对话历史：2 条消息
+2026-03-17 20:15:23 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: e13bf54485666e86
+2026-03-17 20:15:23 | ERROR    | backend.rag.retriever | retriever.py:88 | 添加文档失败: 'DocumentProcessor' object has no attribute 'chunk_document'
+2026-03-17 20:15:23 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 9b63162d2333e1d2
+2026-03-17 20:15:23 | ERROR    | backend.rag.retriever | retriever.py:88 | 添加文档失败: 'DocumentProcessor' object has no attribute 'chunk_document'
+2026-03-17 20:15:23 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 7caed2b3e9097ba0
+2026-03-17 20:15:23 | ERROR    | backend.rag.retriever | retriever.py:88 | 添加文档失败: 'DocumentProcessor' object has no attribute 'chunk_document'
+2026-03-17 20:15:23 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 3c1d2c2a94883db0
+2026-03-17 20:15:23 | ERROR    | backend.rag.retriever | retriever.py:88 | 添加文档失败: 'DocumentProcessor' object has no attribute 'chunk_document'
+2026-03-17 20:15:46 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: e13bf54485666e86
+2026-03-17 20:15:46 | ERROR    | backend.rag.retriever | retriever.py:88 | 添加文档失败: 'DocumentProcessor' object has no attribute 'chunk_document'
+2026-03-17 20:15:46 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 9b63162d2333e1d2
+2026-03-17 20:15:46 | ERROR    | backend.rag.retriever | retriever.py:88 | 添加文档失败: 'DocumentProcessor' object has no attribute 'chunk_document'
+2026-03-17 20:15:46 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 7caed2b3e9097ba0
+2026-03-17 20:15:46 | ERROR    | backend.rag.retriever | retriever.py:88 | 添加文档失败: 'DocumentProcessor' object has no attribute 'chunk_document'
+2026-03-17 20:15:46 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 3c1d2c2a94883db0
+2026-03-17 20:15:46 | ERROR    | backend.rag.retriever | retriever.py:88 | 添加文档失败: 'DocumentProcessor' object has no attribute 'chunk_document'
+2026-03-17 20:15:47 | ERROR    | backend.rag.embedding_service | embedding_service.py:37 | 初始化 Embedding 客户端失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:15:47 | ERROR    | backend.rag.embedding_service | embedding_service.py:71 | Embedding 失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:15:47 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=上海到苏州..., 结果数=0
+2026-03-17 20:16:30 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: e13bf54485666e86
+2026-03-17 20:16:30 | ERROR    | backend.rag.retriever | retriever.py:88 | 添加文档失败: 'DocumentProcessor' object has no attribute 'chunk_document'
+2026-03-17 20:16:30 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 9b63162d2333e1d2
+2026-03-17 20:16:30 | ERROR    | backend.rag.retriever | retriever.py:88 | 添加文档失败: 'DocumentProcessor' object has no attribute 'chunk_document'
+2026-03-17 20:16:30 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 7caed2b3e9097ba0
+2026-03-17 20:16:30 | ERROR    | backend.rag.retriever | retriever.py:88 | 添加文档失败: 'DocumentProcessor' object has no attribute 'chunk_document'
+2026-03-17 20:16:30 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 3c1d2c2a94883db0
+2026-03-17 20:16:30 | ERROR    | backend.rag.retriever | retriever.py:88 | 添加文档失败: 'DocumentProcessor' object has no attribute 'chunk_document'
+2026-03-17 20:16:30 | ERROR    | backend.rag.embedding_service | embedding_service.py:37 | 初始化 Embedding 客户端失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:16:30 | ERROR    | backend.rag.embedding_service | embedding_service.py:73 | Embedding 失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:16:30 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=上海到苏州..., 结果数=0
+2026-03-17 20:18:28 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: e13bf54485666e86
+2026-03-17 20:18:28 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 e13bf54485666e86 分为 1 个块
+2026-03-17 20:18:28 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: e13bf54485666e86, 1 个块
+2026-03-17 20:18:28 | ERROR    | backend.rag.embedding_service | embedding_service.py:36 | 初始化 Embedding 客户端失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:18:28 | ERROR    | backend.rag.embedding_service | embedding_service.py:100 | 批量 Embedding 失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:18:28 | INFO     | backend.rag.vector_store | vector_store.py:107 | 成功添加 1 个文档到向量库
+2026-03-17 20:18:28 | INFO     | backend.rag.retriever | retriever.py:83 | 文档添加成功: e13bf54485666e86, 1 个块
+2026-03-17 20:18:28 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 9b63162d2333e1d2
+2026-03-17 20:18:28 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 9b63162d2333e1d2 分为 1 个块
+2026-03-17 20:18:28 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: 9b63162d2333e1d2, 1 个块
+2026-03-17 20:18:28 | ERROR    | backend.rag.embedding_service | embedding_service.py:36 | 初始化 Embedding 客户端失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:18:28 | ERROR    | backend.rag.embedding_service | embedding_service.py:100 | 批量 Embedding 失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:18:28 | INFO     | backend.rag.vector_store | vector_store.py:107 | 成功添加 1 个文档到向量库
+2026-03-17 20:18:28 | INFO     | backend.rag.retriever | retriever.py:83 | 文档添加成功: 9b63162d2333e1d2, 1 个块
+2026-03-17 20:18:28 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 7caed2b3e9097ba0
+2026-03-17 20:18:28 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 7caed2b3e9097ba0 分为 1 个块
+2026-03-17 20:18:28 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: 7caed2b3e9097ba0, 1 个块
+2026-03-17 20:18:28 | ERROR    | backend.rag.embedding_service | embedding_service.py:36 | 初始化 Embedding 客户端失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:18:28 | ERROR    | backend.rag.embedding_service | embedding_service.py:100 | 批量 Embedding 失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:18:28 | INFO     | backend.rag.vector_store | vector_store.py:107 | 成功添加 1 个文档到向量库
+2026-03-17 20:18:28 | INFO     | backend.rag.retriever | retriever.py:83 | 文档添加成功: 7caed2b3e9097ba0, 1 个块
+2026-03-17 20:18:28 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 3c1d2c2a94883db0
+2026-03-17 20:18:28 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 3c1d2c2a94883db0 分为 1 个块
+2026-03-17 20:18:28 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: 3c1d2c2a94883db0, 1 个块
+2026-03-17 20:18:28 | ERROR    | backend.rag.embedding_service | embedding_service.py:36 | 初始化 Embedding 客户端失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:18:28 | ERROR    | backend.rag.embedding_service | embedding_service.py:100 | 批量 Embedding 失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:18:28 | INFO     | backend.rag.vector_store | vector_store.py:107 | 成功添加 1 个文档到向量库
+2026-03-17 20:18:28 | INFO     | backend.rag.retriever | retriever.py:83 | 文档添加成功: 3c1d2c2a94883db0, 1 个块
+2026-03-17 20:18:28 | ERROR    | backend.rag.embedding_service | embedding_service.py:36 | 初始化 Embedding 客户端失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:18:28 | ERROR    | backend.rag.embedding_service | embedding_service.py:72 | Embedding 失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:18:28 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=上海到苏州..., 结果数=2
+2026-03-17 20:20:22 | INFO     | backend.main | main.py:132 | 客户端断开连接
+2026-03-17 20:20:22 | INFO     | backend.main | main.py:132 | 客户端断开连接
+2026-03-17 20:20:23 | INFO     | backend.main | main.py:40 | 应用关闭，清理资源...
+2026-03-17 20:20:24 | INFO     | backend.main | main.py:29 | 应用启动，开始初始化 Agent...
+2026-03-17 20:20:26 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 20:20:30 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 20:20:31 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 20:20:31 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 20:20:31 | INFO     | backend.main | main.py:33 | Agent 初始化成功，服务就绪
+2026-03-17 20:20:34 | INFO     | backend.main | main.py:121 | WebSocket 连接建立：Address(host='127.0.0.1', port=52618)
+2026-03-17 20:20:34 | INFO     | backend.main | main.py:121 | WebSocket 连接建立：Address(host='127.0.0.1', port=61874)
+2026-03-17 20:20:39 | INFO     | backend.main | main.py:136 | 客户端断开连接
+2026-03-17 20:20:39 | INFO     | backend.main | main.py:136 | 客户端断开连接
+2026-03-17 20:20:43 | INFO     | backend.main | main.py:121 | WebSocket 连接建立：Address(host='127.0.0.1', port=58890)
+2026-03-17 20:20:43 | INFO     | backend.main | main.py:121 | WebSocket 连接建立：Address(host='127.0.0.1', port=53489)
+2026-03-17 20:20:44 | INFO     | backend.main | main.py:121 | WebSocket 连接建立：Address(host='127.0.0.1', port=50411)
+2026-03-17 20:20:44 | INFO     | backend.main | main.py:136 | 客户端断开连接
+2026-03-17 20:20:44 | INFO     | backend.main | main.py:121 | WebSocket 连接建立：Address(host='127.0.0.1', port=61823)
+2026-03-17 20:20:47 | INFO     | backend.main | main.py:121 | WebSocket 连接建立：Address(host='127.0.0.1', port=62244)
+2026-03-17 20:20:51 | INFO     | backend.main | main.py:150 | 收到原始消息：帮我做上海到苏州一日游规划...
+2026-03-17 20:20:51 | INFO     | backend.main | main.py:162 | 解析后用户消息：帮我做上海到苏州一日游规划...
+2026-03-17 20:20:51 | ERROR    | backend.rag.embedding_service | embedding_service.py:36 | 初始化 Embedding 客户端失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:20:51 | ERROR    | backend.rag.embedding_service | embedding_service.py:72 | Embedding 失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:20:51 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=帮我做上海到苏州一日游规划..., 结果数=3
+2026-03-17 20:20:51 | INFO     | backend.main | main.py:178 | RAG 检索到 726 字符的上下文
+2026-03-17 20:20:51 | INFO     | backend.main | main.py:264 | 开始流式执行 Agent... (历史消息数：0)
+2026-03-17 20:20:51 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 20:20:58 | DEBUG    | monitor_handler | monitor_handler.py:318 | 获取到最终回复，长度：358
+2026-03-17 20:20:58 | INFO     | monitor_handler | monitor_handler.py:323 | 执行完成 | LLM 调用：1 | 工具调用：0 | 步骤：2 | Token: 0 (输入:0 + 输出:0)
+2026-03-17 20:20:58 | INFO     | backend.main | main.py:281 | Agent 执行完成，共 8 个事件
+2026-03-17 20:20:58 | INFO     | backend.main | main.py:291 | 发送最终结果，长度：358
+2026-03-17 20:20:58 | INFO     | backend.main | main.py:332 | 当前对话历史：2 条消息
+2026-03-17 20:27:20 | INFO     | backend.main | main.py:150 | 收到原始消息：我明天上午八点出发，预算为4000元左右...
+2026-03-17 20:27:20 | INFO     | backend.main | main.py:162 | 解析后用户消息：我明天上午八点出发，预算为4000元左右...
+2026-03-17 20:27:20 | ERROR    | backend.rag.embedding_service | embedding_service.py:36 | 初始化 Embedding 客户端失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:27:20 | ERROR    | backend.rag.embedding_service | embedding_service.py:72 | Embedding 失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:27:20 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=我明天上午八点出发，预算为4000元左右..., 结果数=3
+2026-03-17 20:27:20 | INFO     | backend.main | main.py:178 | RAG 检索到 726 字符的上下文
+2026-03-17 20:27:20 | INFO     | backend.main | main.py:264 | 开始流式执行 Agent... (历史消息数：2)
+2026-03-17 20:27:20 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 20:28:57 | DEBUG    | monitor_handler | monitor_handler.py:318 | 获取到最终回复，长度：2129
+2026-03-17 20:28:57 | INFO     | monitor_handler | monitor_handler.py:323 | 执行完成 | LLM 调用：9 | 工具调用：8 | 步骤：18 | Token: 0 (输入:0 + 输出:0)
+2026-03-17 20:28:57 | INFO     | backend.main | main.py:281 | Agent 执行完成，共 72 个事件
+2026-03-17 20:28:57 | INFO     | backend.main | main.py:291 | 发送最终结果，长度：2129
+2026-03-17 20:28:57 | INFO     | backend.main | main.py:332 | 当前对话历史：4 条消息
+2026-03-17 20:30:30 | INFO     | backend.main | main.py:150 | 收到原始消息：为什么计划里没有小红书的攻略...
+2026-03-17 20:30:30 | INFO     | backend.main | main.py:162 | 解析后用户消息：为什么计划里没有小红书的攻略...
+2026-03-17 20:30:30 | ERROR    | backend.rag.embedding_service | embedding_service.py:36 | 初始化 Embedding 客户端失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:30:30 | ERROR    | backend.rag.embedding_service | embedding_service.py:72 | Embedding 失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:30:30 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=为什么计划里没有小红书的攻略..., 结果数=3
+2026-03-17 20:30:30 | INFO     | backend.main | main.py:178 | RAG 检索到 726 字符的上下文
+2026-03-17 20:30:30 | INFO     | backend.main | main.py:264 | 开始流式执行 Agent... (历史消息数：4)
+2026-03-17 20:30:30 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 20:30:56 | DEBUG    | monitor_handler | monitor_handler.py:318 | 获取到最终回复，长度：1550
+2026-03-17 20:30:56 | INFO     | monitor_handler | monitor_handler.py:323 | 执行完成 | LLM 调用：1 | 工具调用：0 | 步骤：2 | Token: 0 (输入:0 + 输出:0)
+2026-03-17 20:30:56 | INFO     | backend.main | main.py:281 | Agent 执行完成，共 8 个事件
+2026-03-17 20:30:56 | INFO     | backend.main | main.py:291 | 发送最终结果，长度：1550
+2026-03-17 20:30:56 | INFO     | backend.main | main.py:332 | 当前对话历史：6 条消息
+2026-03-17 20:33:35 | INFO     | backend.main | main.py:150 | 收到原始消息：帮我做北京到苏州一日游规划，明天上午八点出发，预算为4000元左右...
+2026-03-17 20:33:35 | INFO     | backend.main | main.py:162 | 解析后用户消息：帮我做北京到苏州一日游规划，明天上午八点出发，预算为4000元左右...
+2026-03-17 20:33:35 | ERROR    | backend.rag.embedding_service | embedding_service.py:36 | 初始化 Embedding 客户端失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:33:35 | ERROR    | backend.rag.embedding_service | embedding_service.py:72 | Embedding 失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 20:33:35 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=帮我做北京到苏州一日游规划，明天上午八点..., 结果数=3
+2026-03-17 20:33:35 | INFO     | backend.main | main.py:178 | RAG 检索到 726 字符的上下文
+2026-03-17 20:33:35 | INFO     | backend.main | main.py:264 | 开始流式执行 Agent... (历史消息数：6)
+2026-03-17 20:33:35 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 20:34:57 | DEBUG    | monitor_handler | monitor_handler.py:318 | 获取到最终回复，长度：2437
+2026-03-17 20:34:57 | INFO     | monitor_handler | monitor_handler.py:323 | 执行完成 | LLM 调用：8 | 工具调用：7 | 步骤：16 | Token: 0 (输入:0 + 输出:0)
+2026-03-17 20:34:57 | INFO     | backend.main | main.py:281 | Agent 执行完成，共 64 个事件
+2026-03-17 20:34:57 | INFO     | backend.main | main.py:291 | 发送最终结果，长度：2437
+2026-03-17 20:34:57 | INFO     | backend.main | main.py:332 | 当前对话历史：8 条消息
+2026-03-17 21:14:40 | INFO     | backend.main | main.py:136 | 客户端断开连接
+2026-03-17 21:14:40 | INFO     | backend.main | main.py:136 | 客户端断开连接
+2026-03-17 21:14:40 | INFO     | backend.main | main.py:136 | 客户端断开连接
+2026-03-17 21:14:40 | INFO     | backend.main | main.py:136 | 客户端断开连接
+2026-03-17 21:14:40 | INFO     | backend.main | main.py:40 | 应用关闭，清理资源...
+2026-03-17 21:14:42 | INFO     | backend.main | main.py:29 | 应用启动，开始初始化 Agent...
+2026-03-17 21:14:44 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 21:14:47 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 21:14:48 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 21:14:48 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 21:14:48 | INFO     | backend.main | main.py:33 | Agent 初始化成功，服务就绪
+2026-03-17 21:14:54 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=55887)
+2026-03-17 21:14:54 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=59253)
+2026-03-17 21:14:54 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=60409)
+2026-03-17 21:14:56 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=54434)
+2026-03-17 21:14:56 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=64016)
+2026-03-17 21:14:56 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:14:56 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=58553)
+2026-03-17 21:14:59 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=58492)
+2026-03-17 21:15:23 | INFO     | backend.main | main.py:154 | 收到原始消息：预计明天出发，帮我生成北京到苏州的三天旅游规划，预算4000元...
+2026-03-17 21:15:23 | INFO     | backend.main | main.py:166 | 解析后用户消息：预计明天出发，帮我生成北京到苏州的三天旅游规划，预算4000元...
+2026-03-17 21:15:23 | ERROR    | backend.rag.embedding_service | embedding_service.py:36 | 初始化 Embedding 客户端失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 21:15:23 | ERROR    | backend.rag.embedding_service | embedding_service.py:72 | Embedding 失败: The api_key client option must be set either by passing api_key to the client or by setting the OPENAI_API_KEY environment variable
+2026-03-17 21:15:23 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=预计明天出发，帮我生成北京到苏州的三天旅..., 结果数=3
+2026-03-17 21:15:23 | INFO     | backend.main | main.py:182 | RAG 检索到 726 字符的上下文
+2026-03-17 21:15:23 | INFO     | backend.main | main.py:268 | 开始流式执行 Agent... (历史消息数：0)
+2026-03-17 21:15:23 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 21:17:44 | DEBUG    | monitor_handler | monitor_handler.py:318 | 获取到最终回复，长度：2496
+2026-03-17 21:17:44 | INFO     | monitor_handler | monitor_handler.py:323 | 执行完成 | LLM 调用：10 | 工具调用：9 | 步骤：20 | Token: 0 (输入:0 + 输出:0)
+2026-03-17 21:17:44 | INFO     | backend.main | main.py:285 | Agent 执行完成，共 80 个事件
+2026-03-17 21:17:44 | INFO     | backend.main | main.py:295 | 发送最终结果，长度：2496
+2026-03-17 21:17:44 | INFO     | backend.main | main.py:336 | 当前对话历史：2 条消息
+2026-03-17 21:22:24 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:22:24 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=51702)
+2026-03-17 21:22:28 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=50715)
+2026-03-17 21:22:52 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:22:52 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62095)
+2026-03-17 21:22:52 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56936)
+2026-03-17 21:22:52 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:22:56 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=57008)
+2026-03-17 21:22:56 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56414)
+2026-03-17 21:23:09 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:23:09 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:23:09 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:23:09 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:23:09 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:23:09 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:23:09 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:23:09 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:23:09 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:23:09 | INFO     | backend.main | main.py:40 | 应用关闭，清理资源...
+2026-03-17 21:25:51 | INFO     | backend.main | main.py:29 | 应用启动，开始初始化 Agent...
+2026-03-17 21:25:53 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 21:25:57 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 21:25:58 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 21:25:58 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 21:25:58 | INFO     | backend.main | main.py:33 | Agent 初始化成功，服务就绪
+2026-03-17 21:26:02 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=60067)
+2026-03-17 21:26:02 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62322)
+2026-03-17 21:26:02 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63895)
+2026-03-17 21:26:02 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56550)
+2026-03-17 21:26:02 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=60458)
+2026-03-17 21:26:03 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=50448)
+2026-03-17 21:26:05 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=53174)
+2026-03-17 21:26:05 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:26:05 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=53063)
+2026-03-17 21:26:08 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62452)
+2026-03-17 21:29:47 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:29:47 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56626)
+2026-03-17 21:29:51 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=64286)
+2026-03-17 21:31:05 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:31:05 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:31:05 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:31:05 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:31:05 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:31:05 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:31:05 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:31:05 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:31:05 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:31:05 | INFO     | backend.main | main.py:40 | 应用关闭，清理资源...
+2026-03-17 21:31:23 | INFO     | backend.main | main.py:29 | 应用启动，开始初始化 Agent...
+2026-03-17 21:31:25 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 21:31:29 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 21:31:30 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 21:31:30 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 21:31:30 | INFO     | backend.main | main.py:33 | Agent 初始化成功，服务就绪
+2026-03-17 21:31:37 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=61353)
+2026-03-17 21:31:37 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=51974)
+2026-03-17 21:31:37 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=53981)
+2026-03-17 21:31:37 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=57096)
+2026-03-17 21:31:37 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=51070)
+2026-03-17 21:31:37 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=49420)
+2026-03-17 21:31:37 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=55893)
+2026-03-17 21:31:37 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=57732)
+2026-03-17 21:31:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=51162)
+2026-03-17 21:31:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=53411)
+2026-03-17 21:31:39 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:31:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=57543)
+2026-03-17 21:31:42 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=55490)
+2026-03-17 21:32:15 | INFO     | backend.agents.coordinator | coordinator.py:43 | 初始化 Multi-Agent 协调器...
+2026-03-17 21:33:58 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:33:58 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:33:58 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:33:58 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:33:58 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:33:58 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:33:58 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:33:58 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:33:58 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:33:58 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:33:58 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:33:58 | INFO     | backend.main | main.py:40 | 应用关闭，清理资源...
+2026-03-17 21:34:01 | INFO     | backend.main | main.py:29 | 应用启动，开始初始化 Agent...
+2026-03-17 21:34:02 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 21:34:05 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 21:34:06 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 21:34:06 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 21:34:06 | INFO     | backend.main | main.py:33 | Agent 初始化成功，服务就绪
+2026-03-17 21:34:11 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=51495)
+2026-03-17 21:34:12 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=51137)
+2026-03-17 21:34:12 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62052)
+2026-03-17 21:34:12 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=52016)
+2026-03-17 21:34:12 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56443)
+2026-03-17 21:34:13 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63230)
+2026-03-17 21:34:13 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63995)
+2026-03-17 21:34:13 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=53677)
+2026-03-17 21:34:13 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=64191)
+2026-03-17 21:34:13 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=50828)
+2026-03-17 21:34:17 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=57145)
+2026-03-17 21:34:20 | INFO     | backend.agents.coordinator | coordinator.py:43 | 初始化 Multi-Agent 协调器...
+2026-03-17 21:34:24 | INFO     | backend.agents.coordinator | coordinator.py:43 | 初始化 Multi-Agent 协调器...
+2026-03-17 21:36:38 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:38 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:38 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:38 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:38 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:38 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:38 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:38 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:38 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:38 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:38 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:38 | INFO     | backend.main | main.py:40 | 应用关闭，清理资源...
+2026-03-17 21:36:41 | INFO     | backend.main | main.py:29 | 应用启动，开始初始化 Agent...
+2026-03-17 21:36:42 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 21:36:45 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 21:36:46 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 21:36:46 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 21:36:46 | INFO     | backend.main | main.py:33 | Agent 初始化成功，服务就绪
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62821)
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62865)
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=60874)
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=65237)
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=52213)
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=60970)
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56144)
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=61474)
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56962)
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:50 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:53 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=50524)
+2026-03-17 21:36:53 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:36:53 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=50532)
+2026-03-17 21:36:54 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=61625)
+2026-03-17 21:36:54 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62288)
+2026-03-17 21:36:54 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=50359)
+2026-03-17 21:36:54 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56022)
+2026-03-17 21:36:54 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=58224)
+2026-03-17 21:36:54 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=58899)
+2026-03-17 21:36:54 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=52792)
+2026-03-17 21:36:57 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=61155)
+2026-03-17 21:36:58 | INFO     | backend.agents.coordinator | coordinator.py:43 | 初始化 Multi-Agent 协调器...
+2026-03-17 21:37:01 | INFO     | backend.agents.visualization_agent | visualization_agent.py:65 | 豆包图像生成器初始化成功，模型: doubao-seedream-5-0-260128
+2026-03-17 21:37:01 | INFO     | backend.agents.coordinator | coordinator.py:55 | 所有 Agent 初始化完成
+2026-03-17 21:37:09 | INFO     | backend.main | main.py:101 | 健康检查请求
+2026-03-17 21:37:20 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=54080)
+2026-03-17 21:37:20 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:37:20 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=65144)
+2026-03-17 21:37:23 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=60758)
+2026-03-17 21:41:42 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:41:42 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:41:42 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:41:42 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:41:42 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:41:42 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:41:42 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:41:42 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:41:42 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:41:42 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:41:42 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:41:46 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=49167)
+2026-03-17 21:41:46 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63399)
+2026-03-17 21:41:46 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=55131)
+2026-03-17 21:41:46 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63214)
+2026-03-17 21:41:46 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=58811)
+2026-03-17 21:41:46 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=65178)
+2026-03-17 21:41:46 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56334)
+2026-03-17 21:41:46 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=49463)
+2026-03-17 21:41:46 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:41:46 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=54248)
+2026-03-17 21:41:46 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=49304)
+2026-03-17 21:41:46 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:41:46 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=55378)
+2026-03-17 21:41:47 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=50183)
+2026-03-17 21:41:47 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:41:47 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=58368)
+2026-03-17 21:41:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=64566)
+2026-03-17 21:41:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=61146)
+2026-03-17 21:41:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=53513)
+2026-03-17 21:41:51 | INFO     | backend.main | main.py:154 | 收到原始消息：你好...
+2026-03-17 21:41:51 | INFO     | backend.main | main.py:166 | 解析后用户消息：你好...
+2026-03-17 21:41:51 | ERROR    | backend.rag.embedding_service | embedding_service.py:72 | Embedding 失败: Error code: 404
+2026-03-17 21:41:52 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=你好..., 结果数=3
+2026-03-17 21:41:52 | INFO     | backend.main | main.py:182 | RAG 检索到 726 字符的上下文
+2026-03-17 21:41:52 | INFO     | backend.main | main.py:268 | 开始流式执行 Agent... (历史消息数：0)
+2026-03-17 21:41:52 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 21:41:55 | DEBUG    | monitor_handler | monitor_handler.py:318 | 获取到最终回复，长度：147
+2026-03-17 21:41:55 | INFO     | monitor_handler | monitor_handler.py:323 | 执行完成 | LLM 调用：1 | 工具调用：0 | 步骤：2 | Token: 0 (输入:0 + 输出:0)
+2026-03-17 21:41:55 | INFO     | backend.main | main.py:285 | Agent 执行完成，共 8 个事件
+2026-03-17 21:41:55 | INFO     | backend.main | main.py:295 | 发送最终结果，长度：147
+2026-03-17 21:41:55 | INFO     | backend.main | main.py:336 | 当前对话历史：2 条消息
+2026-03-17 21:43:03 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:43:03 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:43:03 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=55713)
+2026-03-17 21:43:03 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:43:03 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=54608)
+2026-03-17 21:43:06 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=52924)
+2026-03-17 21:43:53 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56128)
+2026-03-17 21:43:53 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:43:53 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=59706)
+2026-03-17 21:43:53 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:44:17 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=54237)
+2026-03-17 21:44:17 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:44:17 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=59419)
+2026-03-17 21:44:20 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=53849)
+2026-03-17 21:44:40 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:44:40 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:44:40 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=52241)
+2026-03-17 21:44:40 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:44:40 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62752)
+2026-03-17 21:44:43 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=50450)
+2026-03-17 21:45:38 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=51013)
+2026-03-17 21:45:38 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=55054)
+2026-03-17 21:45:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=59881)
+2026-03-17 21:45:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=59487)
+2026-03-17 21:45:39 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56156)
+2026-03-17 21:45:40 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=49741)
+2026-03-17 21:45:40 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=58537)
+2026-03-17 21:45:40 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62522)
+2026-03-17 21:45:40 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=51866)
+2026-03-17 21:45:40 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=61162)
+2026-03-17 21:45:41 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63845)
+2026-03-17 21:45:41 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:41 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=60538)
+2026-03-17 21:45:42 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63524)
+2026-03-17 21:45:42 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=53283)
+2026-03-17 21:45:43 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=61299)
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=65523)
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:45 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:45:48 | INFO     | backend.main | main.py:40 | 应用关闭，清理资源...
+2026-03-17 21:45:51 | INFO     | backend.main | main.py:29 | 应用启动，开始初始化 Agent...
+2026-03-17 21:45:52 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 21:45:56 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 21:45:57 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 21:45:57 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 21:45:57 | INFO     | backend.main | main.py:33 | Agent 初始化成功，服务就绪
+2026-03-17 21:46:08 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=65056)
+2026-03-17 21:46:08 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=65057)
+2026-03-17 21:46:08 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63118)
+2026-03-17 21:46:08 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=57248)
+2026-03-17 21:46:08 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=55983)
+2026-03-17 21:46:08 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=58448)
+2026-03-17 21:46:08 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62234)
+2026-03-17 21:46:08 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=64286)
+2026-03-17 21:46:08 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=49204)
+2026-03-17 21:46:08 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62115)
+2026-03-17 21:46:09 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62645)
+2026-03-17 21:46:11 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=52592)
+2026-03-17 21:46:11 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=50551)
+2026-03-17 21:46:11 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:46:11 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=51375)
+2026-03-17 21:46:14 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=54749)
+2026-03-17 21:46:20 | INFO     | backend.agents.coordinator | coordinator.py:43 | 初始化 Multi-Agent 协调器...
+2026-03-17 21:46:23 | INFO     | backend.agents.visualization_agent | visualization_agent.py:65 | 豆包图像生成器初始化成功，模型: doubao-seedream-5-0-260128
+2026-03-17 21:46:23 | INFO     | backend.agents.coordinator | coordinator.py:55 | 所有 Agent 初始化完成
+2026-03-17 21:46:23 | INFO     | backend.agents.coordinator | coordinator.py:75 | 开始处理请求: 明天出发，帮我规划北京到苏州三日游，预算4000元...
+2026-03-17 21:46:23 | INFO     | backend.agents.coordinator | coordinator.py:78 | [Coordinator] Step 1: 调用 Search Agent
+2026-03-17 21:46:23 | INFO     | backend.agents.search_agent | search_agent.py:65 | SearchAgent 处理查询: 明天出发，帮我规划北京到苏州三日游，预算4000元...
+2026-03-17 21:46:44 | INFO     | backend.agents.search_agent | search_agent.py:124 | 外部搜索完成，找到 2 条结果
+2026-03-17 21:46:44 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 337defc1fc71dbcb
+2026-03-17 21:46:44 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 337defc1fc71dbcb 分为 1 个块
+2026-03-17 21:46:44 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: 337defc1fc71dbcb, 1 个块
+2026-03-17 21:46:44 | ERROR    | backend.rag.embedding_service | embedding_service.py:100 | 批量 Embedding 失败: Error code: 404
+2026-03-17 21:46:44 | INFO     | backend.rag.vector_store | vector_store.py:107 | 成功添加 1 个文档到向量库
+2026-03-17 21:46:44 | INFO     | backend.rag.retriever | retriever.py:83 | 文档添加成功: 337defc1fc71dbcb, 1 个块
+2026-03-17 21:46:44 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: d093673496f0a965
+2026-03-17 21:46:44 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 d093673496f0a965 分为 1 个块
+2026-03-17 21:46:44 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: d093673496f0a965, 1 个块
+2026-03-17 21:46:44 | ERROR    | backend.rag.embedding_service | embedding_service.py:100 | 批量 Embedding 失败: Error code: 404
+2026-03-17 21:46:44 | INFO     | backend.rag.vector_store | vector_store.py:107 | 成功添加 1 个文档到向量库
+2026-03-17 21:46:44 | INFO     | backend.rag.retriever | retriever.py:83 | 文档添加成功: d093673496f0a965, 1 个块
+2026-03-17 21:46:44 | INFO     | backend.agents.search_agent | search_agent.py:77 | 已将 2 条结果添加到知识库
+2026-03-17 21:46:44 | ERROR    | backend.rag.embedding_service | embedding_service.py:72 | Embedding 失败: Error code: 404
+2026-03-17 21:46:44 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=明天出发，帮我规划北京到苏州三日游，预算..., 结果数=5
+2026-03-17 21:46:44 | ERROR    | backend.agents.search_agent | search_agent.py:202 | RAG 检索失败: 'SearchResult' object has no attribute 'get'
+2026-03-17 21:46:44 | INFO     | backend.agents.coordinator | coordinator.py:88 | [Coordinator] Step 2: 调用 Planner Agent
+2026-03-17 21:46:44 | INFO     | backend.agents.planner_agent | planner_agent.py:91 | PlannerAgent 处理请求: 明天出发，帮我规划北京到苏州三日游，预算4000元...
+2026-03-17 21:47:09 | INFO     | backend.agents.planner_agent | planner_agent.py:112 | PlannerAgent 完成，计划天数: 3
+2026-03-17 21:47:09 | INFO     | backend.agents.coordinator | coordinator.py:97 | [Coordinator] Step 3: 调用 Writer Agent
+2026-03-17 21:47:09 | INFO     | backend.agents.writer_agent | writer_agent.py:62 | WriterAgent 生成攻略，风格: friendly
+2026-03-17 21:47:39 | INFO     | backend.agents.writer_agent | writer_agent.py:76 | WriterAgent 完成，生成 3 天攻略
+2026-03-17 21:47:39 | INFO     | backend.agents.coordinator | coordinator.py:108 | [Coordinator] Step 4: 调用 Visualization Agent
+2026-03-17 21:47:39 | INFO     | backend.agents.visualization_agent | visualization_agent.py:86 | VisualizationAgent 生成路线图，风格: travel poster
+2026-03-17 21:47:39 | ERROR    | backend.agents.visualization_agent | visualization_agent.py:202 | 豆包图像生成失败: Error code: 400 - {'error': {'code': 'InvalidParameter', 'message': 'The parameter `size` specified in the request is not valid: image size must be at least 3686400 pixels. Request id: 0217737552593416fdba12e18648ff4577e64dddd76d2e7908699', 'param': '', 'type': ''}}
+2026-03-17 21:47:39 | INFO     | backend.agents.visualization_agent | visualization_agent.py:105 | VisualizationAgent 完成，标记 0 个景点
+2026-03-17 21:47:39 | INFO     | backend.agents.coordinator | coordinator.py:121 | 所有 Agent 处理完成
+2026-03-17 21:47:41 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:47:42 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63334)
+2026-03-17 21:47:42 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:47:42 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=60439)
+2026-03-17 21:47:45 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63684)
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 21:49:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:14:49 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=59647)
+2026-03-17 22:14:49 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=65220)
+2026-03-17 22:14:49 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56553)
+2026-03-17 22:14:49 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=49681)
+2026-03-17 22:14:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63963)
+2026-03-17 22:14:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=52880)
+2026-03-17 22:14:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=49282)
+2026-03-17 22:14:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62195)
+2026-03-17 22:14:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=53085)
+2026-03-17 22:14:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=53438)
+2026-03-17 22:14:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=52762)
+2026-03-17 22:14:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=52743)
+2026-03-17 22:14:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=51306)
+2026-03-17 22:14:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=50388)
+2026-03-17 22:14:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=51874)
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:31 | INFO     | backend.main | main.py:40 | 应用关闭，清理资源...
+2026-03-17 22:17:33 | INFO     | backend.main | main.py:29 | 应用启动，开始初始化 Agent...
+2026-03-17 22:17:34 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 22:17:36 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 22:17:37 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 22:17:37 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 22:17:37 | INFO     | backend.main | main.py:33 | Agent 初始化成功，服务就绪
+2026-03-17 22:17:38 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=64149)
+2026-03-17 22:17:38 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=64150)
+2026-03-17 22:17:38 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=57684)
+2026-03-17 22:17:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63537)
+2026-03-17 22:17:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56426)
+2026-03-17 22:17:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=49824)
+2026-03-17 22:17:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=54125)
+2026-03-17 22:17:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=54881)
+2026-03-17 22:17:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62939)
+2026-03-17 22:17:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=53779)
+2026-03-17 22:17:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=50156)
+2026-03-17 22:17:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56553)
+2026-03-17 22:17:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=51877)
+2026-03-17 22:17:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=50661)
+2026-03-17 22:17:39 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56588)
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:48 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:51 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56222)
+2026-03-17 22:17:51 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56224)
+2026-03-17 22:17:51 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=59279)
+2026-03-17 22:17:51 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=59280)
+2026-03-17 22:17:52 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=54218)
+2026-03-17 22:17:52 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=56853)
+2026-03-17 22:17:52 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=52295)
+2026-03-17 22:17:52 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=64205)
+2026-03-17 22:17:52 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=55498)
+2026-03-17 22:17:52 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=59941)
+2026-03-17 22:17:52 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=54696)
+2026-03-17 22:17:52 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=58438)
+2026-03-17 22:17:52 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62624)
+2026-03-17 22:17:52 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=61438)
+2026-03-17 22:17:52 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63440)
+2026-03-17 22:17:53 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=53791)
+2026-03-17 22:17:53 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:17:53 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=54629)
+2026-03-17 22:17:56 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=59643)
+2026-03-17 22:18:13 | INFO     | backend.agents.coordinator | coordinator.py:43 | 初始化 Multi-Agent 协调器...
+2026-03-17 22:18:15 | INFO     | backend.agents.visualization_agent | visualization_agent.py:65 | 豆包图像生成器初始化成功，模型: doubao-seedream-5-0-260128
+2026-03-17 22:18:15 | INFO     | backend.agents.coordinator | coordinator.py:55 | 所有 Agent 初始化完成
+2026-03-17 22:18:15 | INFO     | backend.agents.coordinator | coordinator.py:75 | 开始处理请求: 明天出发，帮我规划北京到苏州三日游，预算4000元...
+2026-03-17 22:18:15 | INFO     | backend.agents.coordinator | coordinator.py:78 | [Coordinator] Step 1: 调用 Search Agent
+2026-03-17 22:18:15 | INFO     | backend.agents.search_agent | search_agent.py:65 | SearchAgent 处理查询: 明天出发，帮我规划北京到苏州三日游，预算4000元...
+2026-03-17 22:18:35 | INFO     | backend.agents.search_agent | search_agent.py:124 | 外部搜索完成，找到 2 条结果
+2026-03-17 22:18:35 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 337defc1fc71dbcb
+2026-03-17 22:18:35 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 337defc1fc71dbcb 分为 1 个块
+2026-03-17 22:18:35 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: 337defc1fc71dbcb, 1 个块
+2026-03-17 22:18:36 | ERROR    | backend.rag.embedding_service | embedding_service.py:100 | 批量 Embedding 失败: Error code: 404
+2026-03-17 22:18:36 | INFO     | backend.rag.vector_store | vector_store.py:107 | 成功添加 1 个文档到向量库
+2026-03-17 22:18:36 | INFO     | backend.rag.retriever | retriever.py:83 | 文档添加成功: 337defc1fc71dbcb, 1 个块
+2026-03-17 22:18:36 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: d093673496f0a965
+2026-03-17 22:18:36 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 d093673496f0a965 分为 1 个块
+2026-03-17 22:18:36 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: d093673496f0a965, 1 个块
+2026-03-17 22:18:36 | ERROR    | backend.rag.embedding_service | embedding_service.py:100 | 批量 Embedding 失败: Error code: 404
+2026-03-17 22:18:36 | INFO     | backend.rag.vector_store | vector_store.py:107 | 成功添加 1 个文档到向量库
+2026-03-17 22:18:36 | INFO     | backend.rag.retriever | retriever.py:83 | 文档添加成功: d093673496f0a965, 1 个块
+2026-03-17 22:18:36 | INFO     | backend.agents.search_agent | search_agent.py:77 | 已将 2 条结果添加到知识库
+2026-03-17 22:18:36 | ERROR    | backend.rag.embedding_service | embedding_service.py:72 | Embedding 失败: Error code: 404
+2026-03-17 22:18:36 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=明天出发，帮我规划北京到苏州三日游，预算..., 结果数=5
+2026-03-17 22:18:36 | ERROR    | backend.agents.search_agent | search_agent.py:202 | RAG 检索失败: 'SearchResult' object has no attribute 'get'
+2026-03-17 22:18:36 | INFO     | backend.agents.coordinator | coordinator.py:88 | [Coordinator] Step 2: 调用 Planner Agent
+2026-03-17 22:18:36 | INFO     | backend.agents.planner_agent | planner_agent.py:91 | PlannerAgent 处理请求: 明天出发，帮我规划北京到苏州三日游，预算4000元...
+2026-03-17 22:19:01 | INFO     | backend.agents.planner_agent | planner_agent.py:112 | PlannerAgent 完成，计划天数: 3
+2026-03-17 22:19:01 | INFO     | backend.agents.coordinator | coordinator.py:97 | [Coordinator] Step 3: 调用 Writer Agent
+2026-03-17 22:19:01 | INFO     | backend.agents.writer_agent | writer_agent.py:62 | WriterAgent 生成攻略，风格: friendly
+2026-03-17 22:19:18 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:19:18 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:19:19 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:19:19 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:19:19 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:19:19 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:19:19 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:19:19 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:19:19 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:19:32 | INFO     | backend.agents.writer_agent | writer_agent.py:76 | WriterAgent 完成，生成 3 天攻略
+2026-03-17 22:19:32 | INFO     | backend.agents.coordinator | coordinator.py:108 | [Coordinator] Step 4: 调用 Visualization Agent
+2026-03-17 22:19:32 | INFO     | backend.agents.visualization_agent | visualization_agent.py:86 | VisualizationAgent 生成路线图，风格: travel poster
+2026-03-17 22:20:11 | INFO     | backend.agents.visualization_agent | visualization_agent.py:105 | VisualizationAgent 完成，标记 0 个景点
+2026-03-17 22:20:11 | INFO     | backend.agents.coordinator | coordinator.py:121 | 所有 Agent 处理完成
+2026-03-17 22:29:52 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:29:52 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:29:52 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:29:52 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:29:52 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:29:52 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:29:52 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:29:52 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:29:53 | INFO     | backend.main | main.py:40 | 应用关闭，清理资源...
+2026-03-17 22:29:55 | INFO     | backend.main | main.py:29 | 应用启动，开始初始化 Agent...
+2026-03-17 22:29:56 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 22:29:58 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 22:29:58 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 22:29:58 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 22:29:58 | INFO     | backend.main | main.py:33 | Agent 初始化成功，服务就绪
+2026-03-17 22:30:06 | INFO     | backend.main | main.py:40 | 应用关闭，清理资源...
+2026-03-17 22:30:08 | INFO     | backend.main | main.py:29 | 应用启动，开始初始化 Agent...
+2026-03-17 22:30:09 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 22:30:11 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 22:30:12 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 22:30:12 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 22:30:12 | INFO     | backend.main | main.py:33 | Agent 初始化成功，服务就绪
+2026-03-17 22:30:21 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=52921)
+2026-03-17 22:30:21 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63596)
+2026-03-17 22:30:21 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:30:21 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=50895)
+2026-03-17 22:30:21 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=57057)
+2026-03-17 22:30:24 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=53357)
+2026-03-17 22:30:24 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=53637)
+2026-03-17 22:31:33 | INFO     | backend.agents.coordinator | coordinator.py:43 | 初始化 Multi-Agent 协调器...
+2026-03-17 22:31:35 | INFO     | backend.agents.visualization_agent | visualization_agent.py:65 | 豆包图像生成器初始化成功，模型: doubao-seedream-5-0-260128
+2026-03-17 22:31:35 | INFO     | backend.agents.coordinator | coordinator.py:55 | 所有 Agent 初始化完成
+2026-03-17 22:31:35 | INFO     | backend.agents.coordinator | coordinator.py:75 | 开始处理请求: 明天出发，帮我规划北京到苏州三日游，预算4000元...
+2026-03-17 22:31:35 | INFO     | backend.agents.coordinator | coordinator.py:78 | [Coordinator] Step 1: 调用 Search Agent
+2026-03-17 22:31:35 | INFO     | backend.agents.search_agent | search_agent.py:65 | SearchAgent 处理查询: 明天出发，帮我规划北京到苏州三日游，预算4000元...
+2026-03-17 22:31:59 | INFO     | backend.agents.search_agent | search_agent.py:124 | 外部搜索完成，找到 2 条结果
+2026-03-17 22:31:59 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 337defc1fc71dbcb
+2026-03-17 22:31:59 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 337defc1fc71dbcb 分为 1 个块
+2026-03-17 22:31:59 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: 337defc1fc71dbcb, 1 个块
+2026-03-17 22:31:59 | ERROR    | backend.rag.embedding_service | embedding_service.py:34 | 初始化 DashScope Embedding 客户端失败: cannot import name 'Embedding' from 'dashscope' (D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\dashscope\__init__.py)
+2026-03-17 22:31:59 | ERROR    | backend.rag.embedding_service | embedding_service.py:102 | 批量 Embedding 失败: cannot import name 'Embedding' from 'dashscope' (D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\dashscope\__init__.py)
+2026-03-17 22:31:59 | ERROR    | backend.rag.vector_store | vector_store.py:111 | 添加文档失败: Collection expecting embedding with dimension of 1024, got 1536
+2026-03-17 22:31:59 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: d093673496f0a965
+2026-03-17 22:31:59 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 d093673496f0a965 分为 1 个块
+2026-03-17 22:31:59 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: d093673496f0a965, 1 个块
+2026-03-17 22:31:59 | ERROR    | backend.rag.embedding_service | embedding_service.py:34 | 初始化 DashScope Embedding 客户端失败: cannot import name 'Embedding' from 'dashscope' (D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\dashscope\__init__.py)
+2026-03-17 22:31:59 | ERROR    | backend.rag.embedding_service | embedding_service.py:102 | 批量 Embedding 失败: cannot import name 'Embedding' from 'dashscope' (D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\dashscope\__init__.py)
+2026-03-17 22:31:59 | ERROR    | backend.rag.vector_store | vector_store.py:111 | 添加文档失败: Collection expecting embedding with dimension of 1024, got 1536
+2026-03-17 22:31:59 | INFO     | backend.agents.search_agent | search_agent.py:77 | 已将 2 条结果添加到知识库
+2026-03-17 22:31:59 | ERROR    | backend.rag.embedding_service | embedding_service.py:34 | 初始化 DashScope Embedding 客户端失败: cannot import name 'Embedding' from 'dashscope' (D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\dashscope\__init__.py)
+2026-03-17 22:31:59 | ERROR    | backend.rag.embedding_service | embedding_service.py:72 | Embedding 失败: cannot import name 'Embedding' from 'dashscope' (D:\研究生\1\项目\Travel_Agent-main\.venv\Lib\site-packages\dashscope\__init__.py)
+2026-03-17 22:31:59 | ERROR    | backend.rag.vector_store | vector_store.py:158 | 搜索失败: Collection expecting embedding with dimension of 1024, got 1536
+2026-03-17 22:31:59 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=明天出发，帮我规划北京到苏州三日游，预算..., 结果数=0
+2026-03-17 22:31:59 | INFO     | backend.agents.coordinator | coordinator.py:88 | [Coordinator] Step 2: 调用 Planner Agent
+2026-03-17 22:31:59 | INFO     | backend.agents.planner_agent | planner_agent.py:91 | PlannerAgent 处理请求: 明天出发，帮我规划北京到苏州三日游，预算4000元...
+2026-03-17 22:32:34 | INFO     | backend.agents.planner_agent | planner_agent.py:112 | PlannerAgent 完成，计划天数: 3
+2026-03-17 22:32:34 | INFO     | backend.agents.coordinator | coordinator.py:97 | [Coordinator] Step 3: 调用 Writer Agent
+2026-03-17 22:32:34 | INFO     | backend.agents.writer_agent | writer_agent.py:62 | WriterAgent 生成攻略，风格: friendly
+2026-03-17 22:33:16 | INFO     | backend.agents.writer_agent | writer_agent.py:76 | WriterAgent 完成，生成 3 天攻略
+2026-03-17 22:33:16 | INFO     | backend.agents.coordinator | coordinator.py:108 | [Coordinator] Step 4: 调用 Visualization Agent
+2026-03-17 22:33:16 | INFO     | backend.agents.visualization_agent | visualization_agent.py:86 | VisualizationAgent 生成路线图，风格: travel poster
+2026-03-17 22:34:04 | INFO     | backend.agents.visualization_agent | visualization_agent.py:105 | VisualizationAgent 完成，标记 0 个景点
+2026-03-17 22:34:04 | INFO     | backend.agents.coordinator | coordinator.py:121 | 所有 Agent 处理完成
+2026-03-17 22:44:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:44:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:44:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:44:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:44:06 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:44:06 | INFO     | backend.main | main.py:40 | 应用关闭，清理资源...
+2026-03-17 22:45:37 | INFO     | backend.main | main.py:29 | 应用启动，开始初始化 Agent...
+2026-03-17 22:45:38 | INFO     | agent_manager | agent_manager.py:73 | 初始化 Agent 实例...
+2026-03-17 22:45:41 | INFO     | agent_manager | agent_manager.py:79 | 初始化工具完成：20 个工具
+2026-03-17 22:45:42 | INFO     | agent_manager | agent_manager.py:96 | Agent 实例创建完成
+2026-03-17 22:45:42 | INFO     | agent_manager | agent_manager.py:55 | Agent 启动初始化成功
+2026-03-17 22:45:42 | INFO     | backend.main | main.py:33 | Agent 初始化成功，服务就绪
+2026-03-17 22:45:47 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=55697)
+2026-03-17 22:45:47 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=65108)
+2026-03-17 22:45:48 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=50696)
+2026-03-17 22:45:49 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=57061)
+2026-03-17 22:45:49 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=52774)
+2026-03-17 22:45:49 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:45:50 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=62866)
+2026-03-17 22:45:51 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=63867)
+2026-03-17 22:45:52 | INFO     | backend.main | main.py:125 | WebSocket 连接建立：Address(host='127.0.0.1', port=60099)
+2026-03-17 22:45:56 | INFO     | backend.agents.coordinator | coordinator.py:43 | 初始化 Multi-Agent 协调器...
+2026-03-17 22:45:58 | INFO     | backend.agents.visualization_agent | visualization_agent.py:65 | 豆包图像生成器初始化成功，模型: doubao-seedream-5-0-260128
+2026-03-17 22:45:58 | INFO     | backend.agents.coordinator | coordinator.py:55 | 所有 Agent 初始化完成
+2026-03-17 22:45:58 | INFO     | backend.agents.coordinator | coordinator.py:75 | 开始处理请求: 明天出发，帮我规划北京到苏州三日游，预算4000元...
+2026-03-17 22:45:58 | INFO     | backend.agents.coordinator | coordinator.py:78 | [Coordinator] Step 1: 调用 Search Agent
+2026-03-17 22:45:58 | INFO     | backend.agents.search_agent | search_agent.py:65 | SearchAgent 处理查询: 明天出发，帮我规划北京到苏州三日游，预算4000元...
+2026-03-17 22:46:17 | INFO     | backend.agents.search_agent | search_agent.py:124 | 外部搜索完成，找到 2 条结果
+2026-03-17 22:46:17 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: 337defc1fc71dbcb
+2026-03-17 22:46:17 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 337defc1fc71dbcb 分为 1 个块
+2026-03-17 22:46:17 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: 337defc1fc71dbcb, 1 个块
+2026-03-17 22:46:18 | INFO     | backend.rag.vector_store | vector_store.py:107 | 成功添加 1 个文档到向量库
+2026-03-17 22:46:18 | INFO     | backend.rag.retriever | retriever.py:83 | 文档添加成功: 337defc1fc71dbcb, 1 个块
+2026-03-17 22:46:18 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: d093673496f0a965
+2026-03-17 22:46:18 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 d093673496f0a965 分为 1 个块
+2026-03-17 22:46:18 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: d093673496f0a965, 1 个块
+2026-03-17 22:46:19 | INFO     | backend.rag.vector_store | vector_store.py:107 | 成功添加 1 个文档到向量库
+2026-03-17 22:46:19 | INFO     | backend.rag.retriever | retriever.py:83 | 文档添加成功: d093673496f0a965, 1 个块
+2026-03-17 22:46:19 | INFO     | backend.agents.search_agent | search_agent.py:77 | 已将 2 条结果添加到知识库
+2026-03-17 22:46:19 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-03-17 22:46:19 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=明天出发，帮我规划北京到苏州三日游，预算..., 结果数=2
+2026-03-17 22:46:19 | INFO     | backend.agents.coordinator | coordinator.py:88 | [Coordinator] Step 2: 调用 Planner Agent
+2026-03-17 22:46:19 | INFO     | backend.agents.planner_agent | planner_agent.py:91 | PlannerAgent 处理请求: 明天出发，帮我规划北京到苏州三日游，预算4000元...
+2026-03-17 22:46:54 | INFO     | backend.agents.planner_agent | planner_agent.py:112 | PlannerAgent 完成，计划天数: 3
+2026-03-17 22:46:54 | INFO     | backend.agents.coordinator | coordinator.py:97 | [Coordinator] Step 3: 调用 Writer Agent
+2026-03-17 22:46:54 | INFO     | backend.agents.writer_agent | writer_agent.py:62 | WriterAgent 生成攻略，风格: friendly
+2026-03-17 22:47:34 | INFO     | backend.agents.writer_agent | writer_agent.py:76 | WriterAgent 完成，生成 3 天攻略
+2026-03-17 22:47:34 | INFO     | backend.agents.coordinator | coordinator.py:108 | [Coordinator] Step 4: 调用 Visualization Agent
+2026-03-17 22:47:34 | INFO     | backend.agents.visualization_agent | visualization_agent.py:86 | VisualizationAgent 生成路线图，风格: travel poster
+2026-03-17 22:48:15 | INFO     | backend.agents.visualization_agent | visualization_agent.py:105 | VisualizationAgent 完成，标记 0 个景点
+2026-03-17 22:48:15 | INFO     | backend.agents.coordinator | coordinator.py:121 | 所有 Agent 处理完成
+2026-03-17 22:50:29 | INFO     | backend.agents.coordinator | coordinator.py:75 | 开始处理请求: 上面的回答哪些是基于RAG检索生成的...
+2026-03-17 22:50:29 | INFO     | backend.agents.coordinator | coordinator.py:78 | [Coordinator] Step 1: 调用 Search Agent
+2026-03-17 22:50:29 | INFO     | backend.agents.search_agent | search_agent.py:65 | SearchAgent 处理查询: 上面的回答哪些是基于RAG检索生成的...
+2026-03-17 22:50:53 | INFO     | backend.agents.search_agent | search_agent.py:124 | 外部搜索完成，找到 1 条结果
+2026-03-17 22:50:53 | INFO     | backend.rag.document_processor | document_processor.py:107 | 原始文档已保存: d093673496f0a965
+2026-03-17 22:50:53 | INFO     | backend.rag.document_processor | document_processor.py:182 | 文档 d093673496f0a965 分为 1 个块
+2026-03-17 22:50:53 | INFO     | backend.rag.document_processor | document_processor.py:227 | 文档处理完成: d093673496f0a965, 1 个块
+2026-03-17 22:50:53 | INFO     | backend.rag.vector_store | vector_store.py:107 | 成功添加 1 个文档到向量库
+2026-03-17 22:50:53 | INFO     | backend.rag.retriever | retriever.py:83 | 文档添加成功: d093673496f0a965, 1 个块
+2026-03-17 22:50:53 | INFO     | backend.agents.search_agent | search_agent.py:77 | 已将 1 条结果添加到知识库
+2026-03-17 22:50:54 | INFO     | backend.rag.embedding_service | embedding_service.py:56 | Embedding 成功，维度: 1024
+2026-03-17 22:50:54 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=上面的回答哪些是基于RAG检索生成的..., 结果数=2
+2026-03-17 22:50:54 | INFO     | backend.agents.coordinator | coordinator.py:88 | [Coordinator] Step 2: 调用 Planner Agent
+2026-03-17 22:50:54 | INFO     | backend.agents.planner_agent | planner_agent.py:91 | PlannerAgent 处理请求: 上面的回答哪些是基于RAG检索生成的...
+2026-03-17 22:51:13 | INFO     | backend.agents.planner_agent | planner_agent.py:112 | PlannerAgent 完成，计划天数: 1
+2026-03-17 22:51:13 | INFO     | backend.agents.coordinator | coordinator.py:97 | [Coordinator] Step 3: 调用 Writer Agent
+2026-03-17 22:51:13 | INFO     | backend.agents.writer_agent | writer_agent.py:62 | WriterAgent 生成攻略，风格: friendly
+2026-03-17 22:51:51 | INFO     | backend.agents.writer_agent | writer_agent.py:76 | WriterAgent 完成，生成 1 天攻略
+2026-03-17 22:51:51 | INFO     | backend.agents.coordinator | coordinator.py:108 | [Coordinator] Step 4: 调用 Visualization Agent
+2026-03-17 22:51:51 | INFO     | backend.agents.visualization_agent | visualization_agent.py:86 | VisualizationAgent 生成路线图，风格: travel poster
+2026-03-17 22:52:27 | INFO     | backend.agents.visualization_agent | visualization_agent.py:105 | VisualizationAgent 完成，标记 0 个景点
+2026-03-17 22:52:27 | INFO     | backend.agents.coordinator | coordinator.py:121 | 所有 Agent 处理完成
+2026-03-17 22:52:40 | INFO     | backend.main | main.py:154 | 收到原始消息：上面的回答哪些是基于RAG检索生成的...
+2026-03-17 22:52:40 | INFO     | backend.main | main.py:166 | 解析后用户消息：上面的回答哪些是基于RAG检索生成的...
+2026-03-17 22:52:40 | INFO     | backend.rag.retriever | retriever.py:133 | 检索完成: query=上面的回答哪些是基于RAG检索生成的..., 结果数=2
+2026-03-17 22:52:40 | INFO     | backend.main | main.py:182 | RAG 检索到 172 字符的上下文
+2026-03-17 22:52:40 | INFO     | backend.main | main.py:268 | 开始流式执行 Agent... (历史消息数：0)
+2026-03-17 22:52:40 | DEBUG    | monitor_handler | monitor_handler.py:260 | 开始 stream 执行
+2026-03-17 22:52:52 | DEBUG    | monitor_handler | monitor_handler.py:318 | 获取到最终回复，长度：551
+2026-03-17 22:52:52 | INFO     | monitor_handler | monitor_handler.py:323 | 执行完成 | LLM 调用：1 | 工具调用：0 | 步骤：2 | Token: 0 (输入:0 + 输出:0)
+2026-03-17 22:52:52 | INFO     | backend.main | main.py:285 | Agent 执行完成，共 8 个事件
+2026-03-17 22:52:52 | INFO     | backend.main | main.py:295 | 发送最终结果，长度：551
+2026-03-17 22:52:52 | INFO     | backend.main | main.py:336 | 当前对话历史：2 条消息
+2026-03-17 22:59:29 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:59:29 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:59:29 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:59:29 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:59:29 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:59:29 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:59:29 | INFO     | backend.main | main.py:140 | 客户端断开连接
+2026-03-17 22:59:29 | INFO     | backend.main | main.py:40 | 应用关闭，清理资源...
